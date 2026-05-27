@@ -3,22 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Examen de Bienes Raíces - 75 Preguntas</title>
+  <title>Examen Bienes Raíces NY - 75 Preguntas Aleatorias</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: #f4f6f9;
-      color: #333;
       margin: 0;
       padding: 20px;
     }
     .container {
-      max-width: 900px;
+      max-width: 950px;
       margin: 0 auto;
       background: white;
       padding: 30px;
       border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     }
     h1 {
       text-align: center;
@@ -34,7 +33,7 @@
     .question-number {
       font-weight: bold;
       color: #1e40af;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
     .options {
       display: flex;
@@ -42,7 +41,7 @@
       gap: 10px;
     }
     .option {
-      padding: 12px 15px;
+      padding: 14px 16px;
       border: 2px solid #ddd;
       border-radius: 6px;
       cursor: pointer;
@@ -55,47 +54,38 @@
       background: #d4edda !important;
       border-color: #28a745 !important;
       color: #155724;
-      font-weight: bold;
     }
     .option.wrong {
       background: #f8d7da !important;
       border-color: #dc3545 !important;
       color: #721c24;
     }
-    .result {
-      text-align: center;
-      font-size: 1.3em;
-      margin-top: 30px;
-      padding: 20px;
-      border-radius: 8px;
-    }
     button {
       display: block;
       margin: 30px auto;
-      padding: 12px 30px;
+      padding: 14px 32px;
       font-size: 1.1em;
-      background: #1e40af;
-      color: white;
       border: none;
       border-radius: 6px;
       cursor: pointer;
     }
-    button:hover {
-      background: #1e3a8a;
-    }
+    .btn-primary { background: #1e40af; color: white; }
+    .btn-secondary { background: #6c757d; color: white; }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>🧠 Examen de Bienes Raíces - Nueva York</h1>
-    <p style="text-align:center;">Haz clic en la respuesta que consideres correcta</p>
+    <h1>🧠 Examen de Bienes Raíces - Nueva York (75 Preguntas)</h1>
+    <p style="text-align:center; color:#555;">Las preguntas aparecen en orden aleatorio cada vez que recargas la página</p>
 
     <div id="quiz"></div>
 
-    <button onclick="calcularResultado()">Ver Resultado Final</button>
+    <button class="btn-primary" onclick="calcularResultado()">Ver Resultado Final</button>
+    <button class="btn-secondary" onclick="location.reload()">↻ Nueva Mezcla de Preguntas</button>
   </div>
 
   <script>
+    // Respuestas correctas
     const correctAnswers = {
       1: 'c', 2: 'b', 3: 'd', 4: 'c', 5: 'd', 6: 'b', 7: 'b', 8: 'b', 9: 'c', 10: 'b',
       11: 'a', 12: 'b', 13: 'd', 14: 'd', 15: 'c', 16: 'c', 17: 'd', 18: 'd', 19: 'b', 20: 'a',
@@ -107,17 +97,8 @@
       71: 'b', 72: 'c', 73: 'd', 74: 'b', 75: 'b'
     };
 
+    // Todas las 75 preguntas
     const questions = [
-      {num:1, q:"If a licensee has violated the license law, DOS may impose a fine of:", a:"up to $10,000", b:"no more than $100", c:"up to $1,000", d:"imprisonment for up to five years"},
-      {num:2, q:"If a licensee becomes a partner in a real estate firm, he must have a(n):", a:"salesperson license", b:"broker license", c:"associate broker license", d:"minimum of two years’ experience as a broker"},
-      {num:3, q:"Which of the following duties does NOT require a real estate license?", a:"negotiating the exchange of real property for others", b:"renting units for several different owners", c:"auctioning real property", d:"sale of a business where there is no real property"},
-      {num:4, q:"An apartment sharing agent is licensed by:", a:"Department of Law", b:"New York Attorney General’s office", c:"Department of State", d:"Division of Housing and Community Renewal"},
-      {num:5, q:"A business activity where there is a monopoly or conspiracy that negatively impacts another individual or company to do business is called a(n):", a:"estoppel", b:"illegal use of the rule of reason", c:"kickback", d:"restraint of trade"},
-      // ... (Agregué las primeras 5 para muestra, pero todas están incluidas abajo)
-    ];
-
-    // Todas las preguntas completas
-    const fullQuestions = [
       {num:1, q:"If a licensee has violated the license law, DOS may impose a fine of:", a:"up to $10,000", b:"no more than $100", c:"up to $1,000", d:"imprisonment for up to five years"},
       {num:2, q:"If a licensee becomes a partner in a real estate firm, he must have a(n):", a:"salesperson license", b:"broker license", c:"associate broker license", d:"minimum of two years’ experience as a broker"},
       {num:3, q:"Which of the following duties does NOT require a real estate license?", a:"negotiating the exchange of real property for others", b:"renting units for several different owners", c:"auctioning real property", d:"sale of a business where there is no real property"},
@@ -195,14 +176,24 @@
       {num:75, q:"NYS Penal Code Article 35 has to do with the:", a:"licensure of salespersons and brokers", b:"justification defense to use physical force to defend oneself", c:"licensure of mortgage brokers", d:"defending oneself against wrongdoing at a DOS hearing"}
     ];
 
+    // Función para mezclar las preguntas
+    function shuffle(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+
     function renderQuiz() {
+      const shuffledQuestions = shuffle([...questions]);
       const quizDiv = document.getElementById('quiz');
       let html = '';
 
-      fullQuestions.forEach(q => {
+      shuffledQuestions.forEach((q, index) => {
         html += `
           <div class="question" id="q${q.num}">
-            <div class="question-number">Pregunta ${q.num}</div>
+            <div class="question-number">Pregunta ${index + 1} <small>(Original #${q.num})</small></div>
             <p><strong>${q.q}</strong></p>
             <div class="options">
               <div class="option" data-q="${q.num}" data-answer="a" onclick="selectAnswer(this)">a) ${q.a}</div>
@@ -223,7 +214,7 @@
 
       const options = element.parentElement.children;
 
-      // Deshabilitar más clics
+      // Deshabilitar clics
       Array.from(options).forEach(opt => {
         opt.style.pointerEvents = 'none';
       });
@@ -232,7 +223,6 @@
         element.classList.add('correct');
       } else {
         element.classList.add('wrong');
-        // Marcar la correcta
         Array.from(options).forEach(opt => {
           if (opt.dataset.answer === correctAnswer) {
             opt.classList.add('correct');
@@ -243,29 +233,23 @@
 
     function calcularResultado() {
       let correctCount = 0;
-      const total = 75;
 
-      for (let i = 1; i <= total; i++) {
-        const questionDiv = document.getElementById(`q${i}`);
-        if (questionDiv) {
-          const correctOption = questionDiv.querySelector(`.option[data-answer="${correctAnswers[i]}"]`);
-          if (correctOption && correctOption.classList.contains('correct')) {
-            correctCount++;
-          }
+      document.querySelectorAll('.question').forEach(q => {
+        const correctOption = q.querySelector('.option.correct');
+        if (correctOption && !correctOption.classList.contains('wrong')) {
+          correctCount++;
         }
-      }
+      });
 
-      const percentage = Math.round((correctCount / total) * 100);
-      let message = '';
+      const percentage = Math.round((correctCount / 75) * 100);
+      let mensaje = percentage >= 80 ? "¡Excelente! Estás muy bien preparado." :
+                    percentage >= 70 ? "¡Bien! Pero repasa las áreas débiles." : 
+                    "Necesitas estudiar más. ¡Sigue practicando!";
 
-      if (percentage >= 80) message = "¡Excelente! Estás bien preparado.";
-      else if (percentage >= 70) message = "¡Bien! Pero necesitas repasar algunas áreas.";
-      else message = "Necesitas estudiar más. ¡Tú puedes!";
-
-      alert(`🎯 Resultado Final:\n\nCorrectas: ${correctCount} de ${total}\nPorcentaje: ${percentage}%\n\n${message}`);
+      alert(`🎯 RESULTADO FINAL\n\nCorrectas: ${correctCount} de 75\nPorcentaje: ${percentage}%\n\n${mensaje}`);
     }
 
-    // Iniciar la página
+    // Cargar el examen
     window.onload = renderQuiz;
   </script>
 </body>
