@@ -3,80 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Examen Bienes Raíces NY - 75 Preguntas Aleatorias</title>
+  <title>NY Real Estate - 175 Preguntas (Examen Completo)</title>
   <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f4f6f9;
-      margin: 0;
-      padding: 20px;
-    }
-    .container {
-      max-width: 950px;
-      margin: 0 auto;
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    }
-    h1 {
-      text-align: center;
-      color: #1e3a8a;
-    }
-    .question {
-      margin-bottom: 35px;
-      padding: 20px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      background: #fafcff;
-    }
-    .question-number {
-      font-weight: bold;
-      color: #1e40af;
-      margin-bottom: 12px;
-    }
-    .options {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .option {
-      padding: 14px 16px;
-      border: 2px solid #ddd;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: all 0.3s;
-    }
-    .option:hover {
-      background: #f0f4ff;
-    }
-    .option.correct {
-      background: #d4edda !important;
-      border-color: #28a745 !important;
-      color: #155724;
-    }
-    .option.wrong {
-      background: #f8d7da !important;
-      border-color: #dc3545 !important;
-      color: #721c24;
-    }
-    button {
-      display: block;
-      margin: 30px auto;
-      padding: 14px 32px;
-      font-size: 1.1em;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-    }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f4f6f9; margin: 0; padding: 20px; }
+    .container { max-width: 1100px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+    h1 { text-align: center; color: #1e3a8a; }
+    .question { margin-bottom: 35px; padding: 20px; border: 1px solid #ddd; border-radius: 8px; background: #fafcff; }
+    .question-number { font-weight: bold; color: #1e40af; margin-bottom: 12px; }
+    .options { display: flex; flex-direction: column; gap: 10px; }
+    .option { padding: 14px 16px; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; transition: all 0.3s; }
+    .option:hover { background: #f0f4ff; }
+    .option.correct { background: #d4edda !important; border-color: #28a745 !important; color: #155724; }
+    .option.wrong { background: #f8d7da !important; border-color: #dc3545 !important; color: #721c24; }
+    button { display: block; margin: 30px auto; padding: 14px 32px; font-size: 1.1em; border: none; border-radius: 6px; cursor: pointer; }
     .btn-primary { background: #1e40af; color: white; }
     .btn-secondary { background: #6c757d; color: white; }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>🧠 Examen de Bienes Raíces - Nueva York (75 Preguntas)</h1>
-    <p style="text-align:center; color:#555;">Las preguntas aparecen en orden aleatorio cada vez que recargas la página</p>
+    <h1>🧠 New York Real Estate - 175 Preguntas (Examen Completo)</h1>
+    <p style="text-align:center; color:#555;">75 preguntas originales + 100 del Exam C • Orden aleatorio</p>
 
     <div id="quiz"></div>
 
@@ -85,20 +32,32 @@
   </div>
 
   <script>
-    // Respuestas correctas
     const correctAnswers = {
-      1: 'c', 2: 'b', 3: 'd', 4: 'c', 5: 'd', 6: 'b', 7: 'b', 8: 'b', 9: 'c', 10: 'b',
-      11: 'a', 12: 'b', 13: 'd', 14: 'd', 15: 'c', 16: 'c', 17: 'd', 18: 'd', 19: 'b', 20: 'a',
-      21: 'c', 22: 'b', 23: 'd', 24: 'a', 25: 'b', 26: 'd', 27: 'd', 28: 'b', 29: 'b', 30: 'b',
-      31: 'a', 32: 'a', 33: 'b', 34: 'c', 35: 'a', 36: 'd', 37: 'b', 38: 'c', 39: 'c', 40: 'd',
-      41: 'b', 42: 'a', 43: 'b', 44: 'a', 45: 'd', 46: 'b', 47: 'a', 48: 'd', 49: 'c', 50: 'b',
-      51: 'd', 52: 'c', 53: 'd', 54: 'd', 55: 'b', 56: 'd', 57: 'a', 58: 'd', 59: 'b', 60: 'b',
-      61: 'd', 62: 'a', 63: 'd', 64: 'c', 65: 'b', 66: 'b', 67: 'd', 68: 'd', 69: 'a', 70: 'd',
-      71: 'b', 72: 'c', 73: 'd', 74: 'b', 75: 'b'
+      // 1-75: Preguntas originales
+      1:'c', 2:'b', 3:'d', 4:'c', 5:'d', 6:'b', 7:'b', 8:'b', 9:'c', 10:'b',
+      11:'a',12:'b',13:'d',14:'d',15:'c',16:'c',17:'d',18:'d',19:'b',20:'a',
+      21:'c',22:'b',23:'d',24:'a',25:'b',26:'d',27:'d',28:'b',29:'b',30:'b',
+      31:'a',32:'a',33:'b',34:'c',35:'a',36:'d',37:'b',38:'c',39:'c',40:'d',
+      41:'b',42:'a',43:'b',44:'a',45:'d',46:'b',47:'a',48:'d',49:'c',50:'b',
+      51:'d',52:'c',53:'d',54:'d',55:'b',56:'d',57:'a',58:'d',59:'b',60:'b',
+      61:'d',62:'a',63:'d',64:'c',65:'b',66:'b',67:'d',68:'d',69:'a',70:'d',
+      71:'b',72:'c',73:'d',74:'b',75:'b',
+
+      // 76-175: Exam C (1 a 100)
+      76:'c',77:'b',78:'b',79:'c',80:'a',81:'a',82:'d',83:'a',84:'c',85:'b',
+      86:'c',87:'c',88:'d',89:'c',90:'d',91:'b',92:'b',93:'c',94:'b',95:'d',
+      96:'c',97:'a',98:'a',99:'b',100:'d',101:'d',102:'a',103:'d',104:'c',105:'c',
+      106:'b',107:'c',108:'c',109:'a',110:'d',111:'d',112:'c',113:'a',114:'a',115:'b',
+      116:'c',117:'d',118:'a',119:'d',120:'b',121:'b',122:'b',123:'d',124:'d',125:'c',
+      126:'d',127:'a',128:'b',129:'d',130:'c',131:'b',132:'b',133:'d',134:'c',135:'a',
+      136:'a',137:'b',138:'c',139:'d',140:'a',141:'c',142:'b',143:'d',144:'a',145:'b',
+      146:'d',147:'d',148:'a',149:'b',150:'b',151:'d',152:'b',153:'b',154:'c',155:'d',
+      156:'a',157:'c',158:'c',159:'d',160:'c',161:'d',162:'b',163:'b',164:'c',165:'d',
+      166:'a',167:'d',168:'c',169:'d',170:'c',171:'d',172:'b',173:'d',174:'c',175:'d'
     };
 
-    // Todas las 75 preguntas
     const questions = [
+      // 1-75 Preguntas originales
       {num:1, q:"If a licensee has violated the license law, DOS may impose a fine of:", a:"up to $10,000", b:"no more than $100", c:"up to $1,000", d:"imprisonment for up to five years"},
       {num:2, q:"If a licensee becomes a partner in a real estate firm, he must have a(n):", a:"salesperson license", b:"broker license", c:"associate broker license", d:"minimum of two years’ experience as a broker"},
       {num:3, q:"Which of the following duties does NOT require a real estate license?", a:"negotiating the exchange of real property for others", b:"renting units for several different owners", c:"auctioning real property", d:"sale of a business where there is no real property"},
@@ -173,10 +132,111 @@
       {num:72, q:"A property manager’s fee is usually a combination of a base fee and a percentage of which type of income?", a:"gross potential", b:"gross operating", c:"gross effective", d:"net operating"},
       {num:73, q:"Periodic financial reports provided to the owner are called:", a:"stabilized budgets", b:"operating reports", c:"management statements", d:"property management reports"},
       {num:74, q:"To be eligible for insurance coverage, the insured must have a(n):", a:"a license", b:"insurable interest", c:"extended coverage", d:"coinsurance"},
-      {num:75, q:"NYS Penal Code Article 35 has to do with the:", a:"licensure of salespersons and brokers", b:"justification defense to use physical force to defend oneself", c:"licensure of mortgage brokers", d:"defending oneself against wrongdoing at a DOS hearing"}
+      {num:75, q:"NYS Penal Code Article 35 has to do with the:", a:"licensure of salespersons and brokers", b:"justification defense to use physical force to defend oneself", c:"licensure of mortgage brokers", d:"defending oneself against wrongdoing at a DOS hearing"},
+
+      // 76-175: Exam C (100 preguntas)
+      {num:76, q:"For tax purposes, income earned through salaries or in a business in which the taxpayer materially participates is known as:", a:"passive activity income", b:"portfolio income", c:"active income", d:"capital gain"},
+      {num:77, q:"Private restrictions on land placed by a nongovernmental entity are called:", a:"encroachments", b:"restrictive covenants", c:"embellishments", d:"easements"},
+      {num:78, q:"An acre of land has a width of 90 feet. If the land is rectangular, what is its length (rounded)?", a:"365 feet", b:"484 feet", c:"492 feet", d:"510 feet"},
+      {num:79, q:"If three or more people hold title to a parcel of real estate and they only have unity of possession, they may hold a:", a:"joint tenancy", b:"trust", c:"tenancy in common", d:"joint tenancy by the entirety"},
+      {num:80, q:"Which of the following is exempt from paying property tax? A(n):", a:"municipal town hall", b:"mobile home", c:"gas station", d:"Walmart"},
+      {num:81, q:"A process that calculates the value of an asset in the past, present, or future is called the:", a:"time value of money", b:"return on investment", c:"risk analysis", d:"feasibility"},
+      {num:82, q:"Profit, license, air rights, and subsurface rights are examples of:", a:"easements", b:"liens", c:"encroachments", d:"appurtenances"},
+      {num:83, q:"Offering real estate for sale or rent without the owner's permission is:", a:"prohibited by the Real Estate License Law", b:"a clever business strategy", c:"permitted in all cases", d:"recommended in some cases"},
+      {num:84, q:"The listing salesperson must accept compensation directly from the:", a:"seller", b:"cooperating broker", c:"sponsoring broker", d:"customer"},
+      {num:85, q:"Betty and Melissa own a vacation cabin as joint tenants. At Betty's death, her interest in the property:", a:"escheats to the state", b:"passes to Melissa", c:"reverts to the previous owner", d:"is inherited by the person named in Betty’s will"},
+      {num:86, q:"An insurance policy that covers negligence or bodily injury is called:", a:"package coverage", b:"all perils", c:"liability", d:"whole life"},
+      {num:87, q:"Which of the following is TRUE regarding a real estate team?", a:"a team can operate as its own brokerage firm", b:"a team cannot use the word team in real estate advertising", c:"team members must be associated with the same brokerage firm", d:"an unlicensed individual may not be a member of a real estate team"},
+      {num:88, q:"Cost is:", a:"the same as price", b:"the same as market value", c:"the appraised value", d:"dollar expenditure to construct and finance"},
+      {num:89, q:"Which of the following regarding property managers is TRUE in New York?", a:"they must always hold a minimum of a salesperson license", b:"they must be licensed if working for one owner", c:"they need not be licensed if working for one owner only", d:"they must always hold a broker license"},
+      {num:90, q:"In a salesperson-broker independent contractor relationship, which of the following characterize the relationship? The salesperson:", a:"is compensated by the number of hours worked", b:"may not engage in outside employment", c:"must work only from the broker's office", d:"commissions are paid without deduction for taxes"},
+      {num:91, q:"The map that recites the boundaries of subdivisions is referred to as a(n):", a:"landmark map", b:"plat map", c:"monument and market map", d:"abstract map"},
+      {num:92, q:"NYS Penal Law Article 35:", a:"allows individuals in high risk professions to carry a concealed weapon without a license", b:"allows individuals to legally defend themselves", c:"is an amendment to Article 12-A pertaining to the protection of real estate licensees", d:"prohibits individuals from legally defending themselves unless they have a clear view of a weapon"},
+      {num:93, q:"Seller Jones has signed a listing agreement with Broker Smith. Jones has created what kind of agency?", a:"universal", b:"general", c:"special", d:"designated"},
+      {num:94, q:"A feasibility study is used to determine:", a:"whether a property can be effectively presented and marketed, given current conditions", b:"whether a project will meet the objectives of the investor", c:"the most productive use of a given piece of land", d:"the most probable price for which a property should be sold after reasonable exposure in a competitive market"},
+      {num:95, q:"Candace decides to put awnings up outside the two front windows of her cooperative unit. Which of the following documents may apply to this project?", a:"a list of house rules", b:"an alteration agreement", c:"a recognition agreement", d:"both a list of house rules and an alteration agreement"},
+      {num:96, q:"A periodic accounting by a property manager of all funds received and disbursed is called a(n):", a:"capital reserve budget", b:"accountability statement", c:"property management report", d:"managing statement"},
+      {num:97, q:"Generally, in New York, a real estate contract of sale is NOT binding until:", a:"the attorneys for the parties review and possibly revise it", b:"it is signed by either buyer or seller", c:"it is signed by the real estate brokers, if any, that are involved in the transaction", d:"it is filed with the county clerk"},
+      {num:98, q:"The type of lease that requires a tenant to pay some or all of the expenses of the property is:", a:"a net lease", b:"a gross lease", c:"a periodic lease", d:"any residential lease"},
+      {num:99, q:"Which of the following would be considered a commercial property?", a:"a four-family house", b:"a shopping mall", c:"a recreational area on a lake", d:"an apple orchard"},
+      {num:100, q:"A title insurance policy insures the policy owner from financial loss if which of the following occur?", a:"fire", b:"theft", c:"foreclosure", d:"title defect"},
+      {num:101, q:"The concept that evaluates net operating income from the investment to determine the percentage of profit from a property is the:", a:"capital gain", b:"potential gross income", c:"rate of return", d:"capitalization rate"},
+      {num:102, q:"A municipality may NOT:", a:"declare certain buildings as exterior historic landmarks", b:"declare paintings inside a building as interior historic landmarks", c:"recognize sub districts within an historic preservation district", d:"require property owners to restore a historic landmark"},
+      {num:103, q:"The federal act that expanded the definition of persons liable for environmental cleanup costs is the:", a:"Superfund Amendments and Reauthorization Act", b:"Clean Air Act", c:"National Environmental Policy Act", d:"Environmental Conservation Law"},
+      {num:104, q:"Special assessments levied to property owners for improvements made near the property create which of the following against the property?", a:"lis pendens", b:"judgment", c:"easement", d:"lien"},
+      {num:105, q:"ABC bank refused to make loans in a certain racially integrated section of Queens, New York. This bank is guilty of:", a:"blockbusting", b:"steering", c:"redlining", d:"nothing at all"},
+      {num:106, q:"With regard to investment property, mortgage principal and interest payments are referred to as:", a:"allowable taxable deduction", b:"debt service", c:"tax shelters", d:"proforma expenses"},
+      {num:107, q:"The difference between the rentable and usable area in a commercial space is called the:", a:"vacancy loss", b:"usable square footage", c:"loss factor", d:"effective rental area"},
+      {num:108, q:"The IRS allows a deduction for property taxes on the income tax return for which of the following properties:", a:"income property", b:"vacant land", c:"both of these types of properties", d:"neither of these types of properties"},
+      {num:109, q:"An exclusive right to sell listing provides a:", a:"commission to the agent no matter who sells the property", b:"full commission to the seller if the principal sells the property", c:"commission to the agent whether or not the property is sold", d:"commission to the agent only if the principal sells the property"},
+      {num:110, q:"The transfer of contract obligations is called a(n):", a:"conveyance", b:"contract for deed", c:"counteroffer", d:"assignment"},
+      {num:111, q:"The NYS Agency disclosure form must be used in the sale or lease of:", a:"residential 1-4 unit properties only", b:"commercial properties only", c:"vacant land and residential 1-4 unit properties", d:"residential 1-4 unit properties and condominiums and cooperatives in any size building"},
+      {num:112, q:"Blockbusting is an acceptable practice:", a:"only under the supervision of real estate licensees", b:"only when approved by HUD or the Department of Justice", c:"under no circumstances", d:"only in New York"},
+      {num:113, q:"A loan that does NOT meet the guidelines of government-sponsored entities for funding is called a(n):", a:"unqualified loan", b:"non-conforming loan", c:"A-paper loan", d:"fixed rate loan"},
+      {num:114, q:"In New York, which of the following is TRUE regarding subprime loans?", a:"they must be a first mortgage only", b:"lender kickbacks to mortgage brokers are allowed", c:"the lender can finance point fees exceeding three percent of the loan amount", d:"they are made to borrowers with less than perfect credit reports"},
+      {num:115, q:"The value of a property based on its utility to the owner or investor is called:", a:"value in use", b:"insurance value", c:"mortgage loan value", d:"assessed value"},
+      {num:116, q:"A note in which the principal amount is systematically reduced through regulated payments of both principal and interest is known as a(n):", a:"amortized loan", b:"junior loan", c:"straight term loan", d:"contract for deed"},
+      {num:117, q:"The document the mortgagor receives from the lender when a mortgage is paid in full, is called a(n):", a:"foreclosure notice", b:"title policy", c:"satisfaction of mortgage", d:"nonrecourse note"},
+      {num:118, q:"In New York, dual agency is:", a:"a violation of Article 12-A of the license law", b:"allowable with respect to commercial transactions only", c:"allowable under New York law with disclosure and informed consent", d:"a violation of the agency laws of New York"},
+      {num:119, q:"The function of the deed that the buyer receives at closing is to:", a:"convey title to the property", b:"provide evidence that the title is insured", c:"indicate permission to occupy the property", d:"confirm approval of the mortgage loan"},
+      {num:120, q:"How frequently must brokers renew their licenses?", a:"each year", b:"every other year", c:"every three years", d:"every five years"},
+      {num:121, q:"The net operating income of an office building is $850,000. Using a capitalization rate of 15 percent, what is the value estimate of the property (rounded)?", a:"$5,325,329", b:"$5,445,890", c:"$5,666,667", d:"$5,784,645"},
+      {num:122, q:"A bargain and sale deed contains:", a:"the strongest and broadest form of guarantee of title of any type of deed", b:"an implied representation of good title", c:"a dedication of private land for public use", d:"no warranty as to title"},
+      {num:123, q:"That percentage of market value at which properties are assessed within a community is the:", a:"level of assessment", b:"residential assessment ratio", c:"tax rate", d:"equalization rate"},
+      {num:124, q:"Any mortgage that is lower in priority than another mortgage on the same property is called a(n):", a:"accessory mortgage", b:"junior mortgage", c:"secondary mortgage", d:"subsidiary mortgage"},
+      {num:125, q:"A recommended safety tip for agents to enhance their safety while working at the office or at a property showing is:", a:"to carry a weapon at all times", b:"to use the buddy system", c:"the prospect identification form", d:"a GPS tracking device"},
+      {num:126, q:"An agency relationship between a seller and a broker is formed by a(n):", a:"purchase agreement", b:"management agreement", c:"listing agreement", d:"addendum to the sales contract"},
+      {num:127, q:"Which of the following best explains the term “avulsion”?", a:"Gradually gaining land through the process of soil deposit by a flowing watercourse.", b:"Loss of land due to the gradual washing away of soil by the action of water.", c:"Gaining land by the gradual recession of a lake, sea or river that exposes dry land.", d:"The sudden and rapid loss of land caused by the action of water washing it away."},
+      {num:128, q:"Individuals may file human rights complaints with which of the following government agencies?", a:"HUD", b:"FHA", c:"Fannie Mae", d:"USDA"},
+      {num:129, q:"A protected class in New York, but not in the federal statute is:", a:"age", b:"disability", c:"religion", d:"national origin"},
+      {num:130, q:"An associate broker is a broker who:", a:"works independently", b:"employs unlicensed assistants", c:"works under the name and supervision of another broker", d:"employs licensed salespersons"},
+      {num:131, q:"A cooperative unit is characterized by:", a:"a fee simple estate", b:"identical units for all tenants", c:"individual fee simple ownership for each tenant", d:"ownership evidenced by shares of stock"},
+      {num:132, q:"An apartment information vendor is an individual who, for a fee, engages in the business of:", a:"listing real property for sale", b:"inspecting the condition of real property", c:"introducing property owners who wish to share their housing with others", d:"providing information on the location and availability of residential real property"},
+      {num:133, q:"A real estate broker earns a commission of $4,800 at a rate of 6%. What is the selling price of the property?", a:"$75,000", b:"$80,000", c:"$125,000", d:"$150,000"},
+      {num:134, q:"The IRS rule that allows first-time homebuyers to use IRA distributions to fund up to $10,000 of their new home cost without penalty is called the:", a:"age 59 ½ rule", b:"rue of four", c:"qualified home rule", d:"principal residence exemption"},
+      {num:135, q:"Emily and E.R. work for the same broker. Emily is assigned by her broker to represent a seller client, Audra. E.R. is assigned by the broker to represent a buyer client, David, in the sale of Audra’s property. Emily and E.R. are therefore:", a:"buyer agents", b:"designated agents", c:"general agents", d:"universal agents"},
+      {num:136, q:"If a landlord physically removes a tenant and his possessions from the leased premises without the aid of the court system, this is known as:", a:"dispossession proceedings", b:"self-help", c:"self-dealing", d:"constructive eviction"},
+      {num:137, q:"Nearly all residential dwellings in New York must include which type of detector?", a:"asbestos", b:"carbon monoxide", c:"lead", d:"radon"},
+      {num:138, q:"Escheat is a form of:", a:"involuntary alienation", b:"voluntary alienation", c:"eminent domain", d:"dedication"},
+      {num:139, q:"An insurance policy that combines a variety of insurance coverages is called a(n):", a:"acv policy", b:"rider policy", c:"extended policy", d:"package policy"},
+      {num:140, q:"A type of zoning that is illegal in New York is:", a:"nonconforming use", b:"incentive zoning", c:"cluster zoning", d:"spot zoning"},
+      {num:141, q:"A condominium’s covenants, conditions, and restrictions are incorporated into the:", a:"shares of stock", b:"board package", c:"deed", d:"letter of intent"},
+      {num:142, q:"When the periodic payments made on a mortgage loan do not fully amortize the loan at maturity, the final loan payment is called a(n):", a:"make-up payment", b:"negative amortization payment", c:"acceleration payment", d:"balloon payment"},
+      {num:143, q:"A major portion of the board package submitted to the cooperative board of directors may include:", a:"financial documents", b:"family data", c:"reasons for buying the unit", d:"appraisal of the property"},
+      {num:144, q:"A lease clause that calls for increased costs to the tenant for different reasons at specified times during the lease term is a(n):", a:"index clause", b:"escalation clause", c:"assessment clause", d:"acceleration clause"},
+      {num:145, q:"In residential construction, the concrete base that supports the foundation is the:", a:"foundation wall", b:"sill plate", c:"footing", d:"ridge beam"},
+      {num:146, q:"The mortgagor:", a:"lends the money", b:"receives the payments on the note", c:"holds the mortgage", d:"is the borrower"},
+      {num:147, q:"A common type of commercial lease for a retail establishment is a:", a:"sublease", b:"percentage lease", c:"loft lease", d:"ground lease"},
+      {num:148, q:"The New York law that requires the preparation of an environmental impact statement for any project which may impact the environment and that requires governmental approval is the:", a:"New York Sanitary Code", b:"State Environmental Quality Review Act", c:"Superfund Amendments and Reauthorization Act", d:"the Clean Air Act"},
+      {num:149, q:"The Energy Conservation Construction Code of New York State applies to:", a:"new construction only", b:"commercial construction only", c:"renovated structures only", d:"new construction and renovated structures"},
+      {num:150, q:"Which of the following is a leasehold estate?", a:"apartment", b:"fee simple absolute", c:"life estate", d:"home ownership"},
+      {num:151, q:"A lien or easement is known as a(n):", a:"encumbrance", b:"appurtenance", c:"covenant", d:"tenement"},
+      {num:152, q:"Javier, a seller, consents to dual agency in advance of it occurring during the listing presentation. Which of the following forms is used to indicate his consent?", a:"listing agreement", b:"contract of sale", c:"contingency contract", d:"agency disclosure form"},
+      {num:153, q:"A description by reference:", a:"may be in addition to another description", b:"may be the only description in the deed", c:"may refer to plat as part of a subdivision that has been recorded", d:"may function in any of these ways"},
+      {num:154, q:"The estate that provides the most complete form of ownership in real property is:", a:"fee simple absolute", b:"life estate", c:"estate for years", d:"estate at sufferance"},
+      {num:155, q:"Which of the following is TRUE regarding the involvement of a cooperative’s board in the purchasing process?", a:"they will review an initial application and request a completed package if approved", b:"they may refuse an applicant without giving a reason", c:"they approve or deny applicants based on interviews with both the applicant and their lender", d:"they are exempt from obeying fair housing and equal opportunity laws"},
+      {num:156, q:"A lis pendens is a(n):", a:"easement", b:"lien", c:"legal notice that a lawsuit has been filed", d:"type of judgment"},
+      {num:157, q:"Constructive eviction occurs when:", a:"the property is destroyed by fire", b:"a tenant moves out because the landlord has failed to maintain the premises in a habitable condition", c:"the access road to the parking lot is partially blocked for three months by a street widening project", d:"a tenant is evicted for failure to pay the rent"},
+      {num:158, q:"Measured either before or after taxes are considered, the proceeds remaining after all expenses are met may be referred to as an investment’s:", a:"tax basis", b:"depreciation", c:"cash flow", d:"debt service"},
+      {num:159, q:"If mortgage brokers also represent the seller in a real estate transaction, which type of agency is created?", a:"general", b:"universal", c:"dual", d:"special"},
+      {num:160, q:"An odorless radioactive gas that may seep into a house through cracks in the concrete is/are called:", a:"methane", b:"PCBs", c:"chlordane", d:"radon"},
+      {num:161, q:"Residences are most frequently built using which type of framing?:", a:"braced", b:"steel", c:"platform", d:"pier and beam"},
+      {num:162, q:"If a seller refuses to disclose the condition of a property through the prescribed form in the sale of one-to-four unit residential property, which of the following must happen?", a:"nothing; it is not a seller requirement", b:"the seller must credit the buyer $500 at closing", c:"the sale cannot go through", d:"the real estate agent cannot earn a commission"},
+      {num:163, q:"A joint venture is business organization formed by two or more parties to invest in real estate or other investments that are:", a:"for one project only", b:"made up of shares in multiple properties", c:"part of another deal, such as the purchase of a business", d:"subject to the rules of the Securities and Exchange Commission"},
+      {num:164, q:"If an income property has a value of $1 million and a debt of $500,000, what is the debt ratio?", a:"25 percent", b:"50 percent", c:"75 percent", d:"100 percent"},
+      {num:165, q:"Title to a cooperative apartment building is held by the:", a:"shareholders", b:"cooperative corporation", c:"proprietary lease", d:"cooperative board of directors"},
+      {num:166, q:"For each transaction, a broker's transaction file should include copies of all of the following EXCEPT:", a:"commission agreement", b:"closing statement", c:"contract of sale", d:"MLS entry"},
+      {num:167, q:"Seller Jaycee allows Broker Charles to take a prospect through her property but has not signed a listing agreement. Charles is operating with what kind of authority?", a:"express", b:"implied", c:"none", d:"special"},
+      {num:168, q:"One of the main functions of a planning board is to:", a:"control the environment in the municipality", b:"create laws regarding municipal issues", c:"plan for the future of the region", d:"oversee engineering issues"},
+      {num:169, q:"For tax purposes, the profit realized from the sale of real estate is known as a:", a:"tax basis", b:"tax shelter", c:"portfolio income", d:"capital gain"},
+      {num:170, q:"An investor purchases a $2,500,000 multi-family apartment complex with a $500,000 down payment. Each month the cash flow from rentals, less expenses, is $15,000. What percentage is the cash-on-cash return?", a:"25 percent", b:"36 percent", c:"40 percent", d:"46 percent"},
+      {num:171, q:"When applicable, in the sale of residential property in New York, which of the following is NOT a required disclosure by a seller or real estate agent?", a:"uncapped gas wells", b:"property condition", c:"agency", d:"stigmatized property"},
+      {num:172, q:"A listing in which the owner places the property on the market with one broker but sells it on his own, owing no commission to the listing broker, is known as:", a:"exclusive right to sell listing", b:"net listing", c:"open listing", d:"exclusive agency listing"},
+      {num:173, q:"Regulation Z does NOT cover consumer protections for:", a:"home equity lines of credit", b:"residential mortgage loans", c:"commercial mortgage loans", d:"advertisement for credit terms for residential mortgage loans"},
+      {num:174, q:"The enactment of zoning legislation by a governmental unit is possible under its:", a:"power of seizin", b:"power of eminent domain", c:"police power", d:"condemnation power"},
+      {num:175, q:"Which of the following is NOT considered to be real property?", a:"the surface of the land", b:"air rights", c:"buildings", d:"trade fixtures"}
     ];
 
-    // Función para mezclar las preguntas
     function shuffle(array) {
       for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -186,14 +246,14 @@
     }
 
     function renderQuiz() {
-      const shuffledQuestions = shuffle([...questions]);
+      const shuffled = shuffle([...questions]);
       const quizDiv = document.getElementById('quiz');
       let html = '';
 
-      shuffledQuestions.forEach((q, index) => {
+      shuffled.forEach((q, index) => {
         html += `
           <div class="question" id="q${q.num}">
-            <div class="question-number">Pregunta ${index + 1} <small>(Original #${q.num})</small></div>
+            <div class="question-number">Pregunta ${index + 1} <small>(#${q.num})</small></div>
             <p><strong>${q.q}</strong></p>
             <div class="options">
               <div class="option" data-q="${q.num}" data-answer="a" onclick="selectAnswer(this)">a) ${q.a}</div>
@@ -208,48 +268,38 @@
     }
 
     function selectAnswer(element) {
-      const questionNum = parseInt(element.dataset.q);
-      const selectedAnswer = element.dataset.answer;
-      const correctAnswer = correctAnswers[questionNum];
+      const qNum = parseInt(element.dataset.q);
+      const selected = element.dataset.answer;
+      const correct = correctAnswers[qNum];
 
       const options = element.parentElement.children;
+      Array.from(options).forEach(opt => opt.style.pointerEvents = 'none');
 
-      // Deshabilitar clics
-      Array.from(options).forEach(opt => {
-        opt.style.pointerEvents = 'none';
-      });
-
-      if (selectedAnswer === correctAnswer) {
+      if (selected === correct) {
         element.classList.add('correct');
       } else {
         element.classList.add('wrong');
         Array.from(options).forEach(opt => {
-          if (opt.dataset.answer === correctAnswer) {
-            opt.classList.add('correct');
-          }
+          if (opt.dataset.answer === correct) opt.classList.add('correct');
         });
       }
     }
 
     function calcularResultado() {
       let correctCount = 0;
-
       document.querySelectorAll('.question').forEach(q => {
-        const correctOption = q.querySelector('.option.correct');
-        if (correctOption && !correctOption.classList.contains('wrong')) {
-          correctCount++;
-        }
+        const correctOpt = q.querySelector('.option.correct');
+        if (correctOpt && !correctOpt.classList.contains('wrong')) correctCount++;
       });
 
-      const percentage = Math.round((correctCount / 75) * 100);
+      const percentage = Math.round((correctCount / 175) * 100);
       let mensaje = percentage >= 80 ? "¡Excelente! Estás muy bien preparado." :
-                    percentage >= 70 ? "¡Bien! Pero repasa las áreas débiles." : 
-                    "Necesitas estudiar más. ¡Sigue practicando!";
+                    percentage >= 70 ? "¡Buen resultado! Repasa las áreas débiles." : 
+                    "Sigue estudiando. ¡Tú puedes!";
 
-      alert(`🎯 RESULTADO FINAL\n\nCorrectas: ${correctCount} de 75\nPorcentaje: ${percentage}%\n\n${mensaje}`);
+      alert(`🎯 RESULTADO FINAL\n\nCorrectas: ${correctCount} de 175\nPorcentaje: ${percentage}%\n\n${mensaje}`);
     }
 
-    // Cargar el examen
     window.onload = renderQuiz;
   </script>
 </body>
